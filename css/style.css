@@ -1,42 +1,58 @@
 body{
     background-color: rgb(208, 208, 247);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-#logo_img
-{
-    height: 500px;
-    width: 500px;
+/* logo image css */
+p{
+   font-size: 60px;
+   font-weight: 600;
 }
- .left{
-    align-content: calc(100%/2);
+sub{
+   color: hsl(214, 100%, 63%) ;
+}
+.flex-col {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
  }
- .right{
-    align-content: calc(100%/2);
+ /* Social login */
+ .social-login{
+   justify-content: space-evenly;
+   display:block;
  }
+ #flogin:hover{
+   background-color: hsl(214, 100%, 63%);
+ }#glogin:hover{
+   background-color: hsl(214, 100%, 63%);
+ }
+ /* facebook login button css */
  #flogin{
-    float: right;
-    margin-top: calc(100%/3);
-    margin-right: calc(100%/4);
+    margin-top: calc(100%/5);
     background-color: rgb(19, 62, 255);
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 60px;
     border-radius: 10px;
     color: white;
     font-weight: 600;
     font-size: 25px;
  }
+ /* Google login button css */
  #glogin{
-    float: right;
-    margin-top:20px;
-    margin-right: calc(100%/4);
     background-color: rgb(19, 62, 255);
-    width: 300px;
-    height: 40px;
+    margin-top: 20px;
+    padding: px;
+    width: 400px;
+    height: 60px;
     border-radius: 10px;
     color: white;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 23px;
  }
-/*  
  #signOut{
     float: right;
    margin-top: 20px;
@@ -48,4 +64,5 @@ body{
     color: white;
     font-weight: 600;
     font-size: 25px;
- } */
+    display: none;
+ }
