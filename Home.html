@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechX</title>
+        <link rel="shortcut icon" href="image/logo2.2-remove.png" type="image/x-icon">
+         <!-- Bootstrap File  -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/Home.css">
+    </head>
+<body>
+    <!-- Header start here -->
+        <header>
+            <div class="row">
+                <img src="image/TechX_logo-remove.png" alt="TechX" id="logo">
+            </div>
+            <div class="row">
+                <button id="Create_post" onclick="myfunction()">What's in your mind?</button>
+            </div>
+        </header>
+        <!-- Header ends here -->
+        <!-- Main section start here -->
+        <main>
+          <section>
+            <div class="post">
+                <!-- User profile start here -->
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/abstract-dark-background-with-flowing-colouful-waves.jpg" alt="image"id="user_image">
+                    </div>
+                    <div class="col" id="user_name">
+                        <h4>Deny johns</h4>
+                    </div>
+                    <!-- Drop-down list -->
+                    <div class="col-1 dropdown">
+                        <!-- three dots -->
+                        <ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()">
+                          <li></li><li></li><li></li>
+                        </ul>
+                        <!-- menu -->
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#home">Open</a>
+                          <a href="#about">Edit</a>
+                        </div>
+                      </div>
+                </div>
+                <!-- Content start here -->
+                <div class="row">
+                    <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi iste amet asperiores! Aliquid, optio vero nemo nulla quo praesentium omnis enim corporis eos animi, deleniti atque ipsum, beatae maiores.
+                        Vero est nobis cupiditate. Quod itaque ullam sunt iusto. Cum reiciendis accusantium error natus. Exercitationem suscipit dolore consequatur laborum molestiae alias neque excepturi, libero doloribus, quam consectetur perferendis. Necessitatibus, enim?
+                        Optio ratione quod accusamus ullam facere ut voluptates expedita porro? Nostrum perferendis facere ex nemo ea pariatur nesciunt id magni, nisi, earum assumenda quis, laborum suscipit mollitia voluptates. Accusamus, pariatur.
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><img src="image/11.jpg" alt="image" id="img_set"></div>
+                    <div class="col-6"><img src="image/14.jpeg" alt="image" id="img_set"></div>
+                </div>
+                <!-- Button section start here -->
+                <div class="row button_area">
+                    <div class="col">
+                        <button class="heart_button" onclick="heart()" id="heart">
+                            <div class='large-font text-center top-20'>
+                                <ion-icon name="heart">
+                                    <div class="red-bg"></div>
+                                </ion-icon>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="smile_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="like_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                                <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <section>
+            <div class="post">
+                <!-- User profile start here -->
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/abstract-dark-background-with-flowing-colouful-waves.jpg" alt="image"id="user_image">
+                    </div>
+                    <div class="col" id="user_name">
+                        <h4>Deny johns</h4>
+                    </div>
+                    
+                </div>
+                <!-- Content start here -->
+                <div class="row">
+                    <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi iste amet asperiores! Aliquid, optio vero nemo nulla quo praesentium omnis enim corporis eos animi, deleniti atque ipsum, beatae maiores.
+                        Vero est nobis cupiditate. Quod itaque ullam sunt iusto. Cum reiciendis accusantium error natus. Exercitationem suscipit dolore consequatur laborum molestiae alias neque excepturi, libero doloribus, quam consectetur perferendis. Necessitatibus, enim?
+                        Optio ratione quod accusamus ullam facere ut voluptates expedita porro? Nostrum perferendis facere ex nemo ea pariatur nesciunt id magni, nisi, earum assumenda quis, laborum suscipit mollitia voluptates. Accusamus, pariatur.
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><img src="image/12.jpg" alt="image" id="img_set"></div>
+                    <div class="col-6"><img src="image/13.jpg" alt="image" id="img_set"></div>
+                </div>
+                <!-- Button section start here -->
+                <div class="row button_area">
+                    <div class="col">
+                        <button class="heart_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="smile_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="like_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                                <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </section><section>
+            <div class="post">
+                <!-- User profile start here -->
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/abstract-dark-background-with-flowing-colouful-waves.jpg" alt="image"id="user_image">
+                    </div>
+                    <div class="col" id="user_name">
+                        <h4>Deny johns</h4>
+                    </div>
+                    
+                </div>
+                <!-- Content start here -->
+                <div class="row">
+                    <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi iste amet asperiores! Aliquid, optio vero nemo nulla quo praesentium omnis enim corporis eos animi, deleniti atque ipsum, beatae maiores.
+                        Vero est nobis cupiditate. Quod itaque ullam sunt iusto. Cum reiciendis accusantium error natus. Exercitationem suscipit dolore consequatur laborum molestiae alias neque excepturi, libero doloribus, quam consectetur perferendis. Necessitatibus, enim?
+                        Optio ratione quod accusamus ullam facere ut voluptates expedita porro? Nostrum perferendis facere ex nemo ea pariatur nesciunt id magni, nisi, earum assumenda quis, laborum suscipit mollitia voluptates. Accusamus, pariatur.
+                    </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><img src="image/11.jpg" alt="image" id="img_set"></div>
+                    <div class="col-6"><img src="image/14.jpeg" alt="image" id="img_set"></div>
+                </div>
+                <!-- Button section start here -->
+                <div class="row button_area">
+                    <div class="col">
+                        <button class="heart_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="smile_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="like_button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                                <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+          </section>
+        </main>
+        <!-- Main section ends here -->
+      <!-- footer start here -->
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <button class="home">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                          </svg>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="profile" onclick="profile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg>
+                    </button>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends here -->
+<script src="JavaScript/Home.js"></script>
+</body>
+</html>

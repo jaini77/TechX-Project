@@ -29,13 +29,12 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
                         <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
                       </svg>&emsp;LOG IN WITH GOOGLE</button>
-                </center>
+                    </center>
                 </div>
                 <!-- Logout funtion -->
                 <button class="sign-out" id="signOut">LOG OUT</button>
             </div>
-          
-        </div>
+    </div>
         <!-- Login page ends here -->
 
     </div>
@@ -43,7 +42,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-        import { getAuth ,GoogleAuthProvider, signInWithPopup, signOut, FacebookAuthProvider  } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+        import { getAuth ,GoogleAuthProvider, signInWithPopup, signOut, FacebookAuthProvider, onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -72,12 +71,23 @@
                     const token = credential.accessToken;
                     // The signed-in user info.
                     const user = result.user;
+                    
                     //User name = displayName
-                    //email = email
+                   // email = email
                     //photo = photoURl
-                    //redirect                    
-
-                    alert("User Log in : "+user.displayName);
+                    //redirect      
+                    var Uname = user.displayName;  
+                    console.log(user);
+                    console.log("user logged in");
+                    console.log("User name:",user.displayName);
+                    console.log("user EmailID :",user.email);
+                    console.log("PhotoURL :",user.photoURL);
+                    console.log(Uname);
+                    localStorage.setItem("Name",user.displayName);
+                    localStorage.setItem("emailID",user.email);
+                    localStorage.setItem("photoURL",user.photoURL);
+                    alert("user login : "+user.displayName);
+                    window.location.href = 'Profile.html';
                     // IdP data available using getAdditionalUserInfo(result)
                     // ...
                 }).catch((error) => {
@@ -89,20 +99,22 @@
                     // The AuthCredential type that was used.
                     const credential = GoogleAuthProvider.credentialFromError(error);
                     // ...
-                    alert(errorMessage);
+                    alert(errorCode,errorMessage,email);
                 });
         });
-        // Sign out function
-
-        // signOut.addEventListener('click',(e) =>{
-        //     const auth = getAuth(); 
-        //     signOut(auth).then(() => {
-        //         alert("You have been signed out Successfully...");
-        //     }).catch((error) => {
-        //         alert(error);
+        // auth = getAuth(app);
+        //     onAuthStateChanged(auth, (user) => {
+        //     if (user) {
+        //         // User is signed in, see docs for a list of available properties
+        //         // https://firebase.google.com/docs/reference/js/auth.user
+        //         const uid = user.uid;
+        //         // ...
+        //     } else {
+        //         // User is signed out
+        //         console.log("user sign out");
+        //         // ...
+        //     }
         //     });
-        // });
-
         // Facebook sign with firebase.
         const provider2 = new FacebookAuthProvider();
         flogin.addEventListener('click',(e)=>{
@@ -132,7 +144,18 @@
                     // ...
                     alert(errorMessage);
                 });
-        });
+         });
+        // const user = new GoogleAuthProvider();
+
+        //     if (user !== null) {
+        //     user.providerData.forEach((profile) => {
+        //         console.log("Sign-in provider: " + profile.providerId);
+        //         console.log(" Provider-specific UID: " + profile.uid);
+        //         console.log(" Name: " + profile.displayName);
+        //         console.log(" Email: " + profile.email);
+        //         console.log(" Photo URL: " + profile.photoURL);
+        //     });
+        //     }
 
       </script>
       <!-- JavaScript Ends Here -->
