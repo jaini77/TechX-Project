@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#logo{
+    height:90px;
+    width: 250px;
+}
+/* Main class css */
+main{
+    padding:5px;
+    width: 100%;
+    height: calc(372px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align:justify;
+}
+/* post css start here */
+
+/* Drop down list */
+.showLeft {
+    background-color:transparent !important;
+    border: 1px solid transparent !important;
+    text-shadow: white !important;
+    color: black !important;
+    padding: 10px;
+  }
+  .icons li {
+    background: none repeat scroll 0 0 black;
+    height: 7px;
+    width: 7px;
+    line-height: 0;
+    list-style: none outside none;
+    margin-right: 15px;
+    margin-top: 3px;
+    vertical-align: top;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .btn-left {
+    left: 0.4em;
+  }
+  .btn-right {
+    right: 0.4em;
+  }
+  .btn-left,
+  .btn-right {
+    position: absolute;
+    top: 0.24em;
+  }
+  .dropbtn {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+  .dropdown {
+    position: absolute;
+    right:0vh;
+    margin-right: 8%;
+  }
+  .dropdown-content {
+    display: none;
+    position: relative;
+    margin-top: 60px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+#Create_post{
+    width: 100%;
+    height: 50px;
+    border: 1px solid blue;
+    border-radius:10px ;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+    color: rgb(163, 159, 153);
+}
+#user_image{
+    border-radius: 50%;
+    height: 80px;
+}
+/* post content */
+.content{
+    text-justify: auto;
+    font-family: sans-serif;
+    font-size: large;
+    font-stretch:extra-expanded;
+}
+/* post image css */
+#img_set{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px;
+}
+/* heart button css start */
+.large-font{font-size: xx-large;}
+.top-20{position: relative;top: 20vh;}
+ion-icon.active{animation: like 0.5s 1;fill: red;stroke: none;}
+ion-icon{fill: transparent;stroke: black;stroke-width: 30;transition: all 0.5s;}
+@keyframes like
+{
+  0% {transform: scale(1);}
+  90%{transform: scale(1.2);}
+  100%{transform: scale(1.1);}
+}
+.smile_button{
+    height: 50px;
+    border: none;
+    background: transparent; 
+    margin-left: calc(100%/2);
+    color:  hsl(61, 100%, 63%);
+}
+.like_button{
+    height: 50px;
+    border: none;
+    background: transparent; 
+    margin-left: calc(100%/2);
+    color:  hsl(214, 100%, 63%);
+}
+.button_area{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* footer css start */
+footer{
+    border:2px solid blue;
+    border-radius: 15px;
+    width: 100%;
+    justify-content: baseline;
+      
+}
+.home{
+    height: 80px;
+    border: none;
+    background: transparent; 
+    margin-left: calc(100%/2);
+    color:  hsl(214, 100%, 63%);
+}
+.home:hover{color:  hsl(215, 100%, 43%);}
+.profile{
+    
+    height: 80px;
+    border: none;
+    background: transparent;
+    margin-left: calc(100%/3);
+}
+.profile:hover{color:  hsl(214, 100%, 63%);}
