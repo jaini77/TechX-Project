@@ -11,7 +11,7 @@ body{
 main{
     padding:5px;
     width: 100%;
-    height: calc(372px);
+    height: calc(400px);
     overflow-y: auto;
     overflow-x: hidden;
     text-align:justify;
