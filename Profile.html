@@ -41,7 +41,7 @@
     <!-- Profile section start  -->
     <section class="profile-section">
       <div class="profile-header">
-        <img src="image/User_image.jpeg" alt="Profile Picture" id="userpic" class="rounded-circle rounded mx-auto d-block">
+        <img src="" alt="Profile Picture" id="userpic" class="rounded-circle rounded mx-auto d-block">
         <h2 class="text-center" id="Uname">User</h2>
       </div>
     </section>
@@ -76,10 +76,10 @@
   </footer>
 <!-- Footer ends here -->
 <script>
+  // Onload function fetch user details 
   window.onload =  function(){
     $photo = localStorage.getItem('photoURL')
     document.getElementById('userpic').src =$photo;
-    console.log($photo);
     $uname = localStorage.getItem('Name');
     document.getElementById('Uname').innerText=$uname;
   }
@@ -92,6 +92,10 @@ function signout(){
   window.location.href=('index.html');
   alert("You are Log-out now ");
 }
+// Prevent back function
+function preventBack() { window.history.forward(); }  
+    setTimeout("preventBack()", 0); 
+    window.onunload = function () { null };  
 </script>
 
 </body>
